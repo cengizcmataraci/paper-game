@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { RecoilRoot } from "recoil";
+import Game from "./Game";
+import Score from "./Score";
+import HighScore from "./HighScore";
+import Gems from "./Gems";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <RecoilRoot>
+      <div className="App">
+        <h1>Paper Click</h1>
+        <Score />
+        <HighScore />
+        <Game />
+        <Gems />
+      </div>
+    </RecoilRoot>
   );
 }
 
